@@ -1,0 +1,357 @@
+1. 	H0 = TV, radio, newspaper advertising have no effect on sales
+x 0 , represented by N 0 . It then estimates f (x 0 ) using the average of all the
+training responses in N 0 .
+
+	HA = TV, radio, newspaper advertising have an effect on sales	
+
+	Conclusions: TV & radio advertising has a significant effect on sales, thus HA = true
+				 newspaper advertising has no effect on sales, thus H0 = true
+
+2. K-nearest neighbors (KNN) classifier. Given a positive in-
+teger K and a test observation x 0 , the KNN classifier first identifies the
+K points in the training data that are closest to x 0 , represented by N 0 .
+It then estimates the conditional probability for class j as the fraction of
+points in N 0 whose response values equal j:
+
+The KNN regression method is closely related to the KNN classifier dis-
+cussed in Chapter 2. Given a value for K and a prediction point x 0 , KNN
+regression first identifies the K training observations that are closest to
+3.
+
+a)
+
+Y = 50 + 20(gpa) + 0.07(iq) + 35(gender) + 0.01(gpa * iq) - 10 (gpa * gender)
+
+Once the GPA is high enough, males earn more on average. => iii.
+
+b) 
+
+Y(Gender = 1, IQ = 110, GPA = 4.0)
+= 50 + 20 * 4 + 0.07 * 110 + 35 + 0.01 (4 * 110) - 10 * 4
+= 137.1
+
+c)
+
+The interaction effect is determined by P value
+
+
+4.
+
+a) 
+
+RSS would be smaller for linear than for cubic
+
+b)
+
+RSS would be smaller for linear than for cubic
+
+c)
+
+RSS smaller for cubic
+
+d) 
+
+Hard to say
+
+
+
+8.
+a
+
+i. Yes there is an interaction
+ii. Very strong: <2e-16
+iii. Negative: -0.157845
+iV. 
+       fit      lwr      upr
+1 24.46708 23.97308 24.96108
+
+
+c
+
+Non-linear
+
+
+9.
+
+c)
+
+i. Yes, there is a relationship: F-statistic: 252.4 on 7 and 384 DF,  p-value: < 2.2e-16
+
+ii.
+
+displacement   0.019896   0.007515   2.647  0.00844 ** 
+weight        -0.006474   0.000652  -9.929  < 2e-16 ***
+year           0.750773   0.050973  14.729  < 2e-16 ***
+origin         1.426141   0.278136   5.127 4.67e-07 ***
+
+iii. There's a positive and a statistically significant relationship between mpg and year
+
+
+d)
+
+Outliers: 323, 327, Leverage points: #14
+
+
+summary(lm(medv∼lstat*age,data = Boston))
+
+
+summary(lm(mpg~displacement*weight*year*origin, data=Auto))
+summary(lm(mpg~displacement*weight*year, data=Auto))
+summary(lm(mpg~displacement*weight, data=Auto))
+
+lm.fit2 = lm(mpg~weight+I(log(weight)))
+lm.fit2 = lm(mpg~horsepower+I(lstat^2))
+
+
+
+10
+
+b)
+
+Call:
+lm(formula = Sales ~ Price + Urban + US)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.9206 -1.6220 -0.0564  1.5786  7.0581 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 13.043469   0.651012  20.036  < 2e-16 ***
+Price       -0.054459   0.005242 -10.389  < 2e-16 ***
+UrbanYes    -0.021916   0.271650  -0.081    0.936    
+USYes        1.200573   0.259042   4.635 4.86e-06 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.472 on 396 degrees of freedom
+Multiple R-squared:  0.2393,	Adjusted R-squared:  0.2335 
+F-statistic: 41.52 on 3 and 396 DF,  p-value: < 2.2e-16
+
+***
+F-statistic shows that there is a significant interaction between variables
+Price has a significant negative relationship to sales -- the higher price the less sales
+Urban environment has no effect on sales
+The store being located in US has a significant positive effect on sales
+
+
+c)
+
+^y = 13 + (-0.055*Price) + (-0.022, if Urban) + (1.2, if US)
+
+
+d) For Price and US
+
+
+e) 
+
+^y = 13 + (-0.055*Price) + (1.2, if US)
+
+
+f) Model (a) 0.2393; (e) 0.2393 ==> not very well
+
+g) 
+
+h) residuals look fine -- all between 3 of studentized, some leverage values
+
+
+11.
+
+a)
+
+Call:
+lm(formula = y ~ x + 0)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.9154 -0.6472 -0.1771  0.5056  2.3109 
+
+Coefficients:
+  Estimate Std. Error t value Pr(>|t|)    
+x   1.9939     0.1065   18.73   <2e-16 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.9586 on 99 degrees of freedom
+Multiple R-squared:  0.7798,	Adjusted R-squared:  0.7776 
+F-statistic: 350.7 on 1 and 99 DF,  p-value: < 2.2e-16
+
+
+
+Predicted coeffcient estimate = 1.9939
+SE of the estimate = 0.1065
+t- statistic = 18.73
+P-value = <2e-16 ***
+
+
+There is a highly significant positive relationship between x and y
+
+
+b)
+
+
+Call:
+lm(formula = x ~ y + 0)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.8699 -0.2368  0.1030  0.2858  0.8938 
+
+Coefficients:
+  Estimate Std. Error t value Pr(>|t|)    
+y  0.39111    0.02089   18.73   <2e-16 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4246 on 99 degrees of freedom
+Multiple R-squared:  0.7798,	Adjusted R-squared:  0.7776 
+F-statistic: 350.7 on 1 and 99 DF,  p-value: < 2.2e-16
+
+
+Predicted coeffcient estimate = 0.39111
+SE of the estimate = 0.02089
+t-statistic = 18.73
+P-value = <2e-16 ***
+
+
+There is a highly significant positive relationship between y and x
+
+
+c) Both results in (a) and (b) reflect the same line created in 11a. In other
+words, $y = 2x + \epsilon$ could also be written $x = 0.5 * (y - \epsilon)$.
+
+d)
+(sqrt(length(x)-1) * sum(x*y)) / (sqrt(sum(x*x) * sum(y*y) - (sum(x*y))^2))
+
+
+e) t-value 18.72593 is the same with both methods and the same for x~y and y~x. If you swap t(x,y) as t(y,x), then you will find t(x,y) = t(y,x).
+
+f) t values are the same for all
+
+
+
+12)
+
+a) when x = y
+
+b)
+
+13)
+
+c) Vector length = 100
+beta-0 = -1
+beta-1 = 0.5
+
+
+set.seed(1)
+x = rnorm(100)
+eps = rnorm(100, mean = 0, sd = sqrt(0.1))
+y = -1 + 0.5*x + eps
+plot(x,y)
+lm.fit10 = lm(y~x)
+summary(lm.fit10)
+confint(lm.fit10)
+
+
+
+j)
+
+for initial variance
+                 2.5 %     97.5 %
+(Intercept) -1.0727832 -0.9510557
+x            0.4320613  0.5672681
+
+
+for smaller variance
+
+
+
+Exercise 15
+
+> summary(Boston)
+      crim                zn             indus      
+ Min.   : 0.00632   Min.   :  0.00   Min.   : 0.46  
+ 1st Qu.: 0.08204   1st Qu.:  0.00   1st Qu.: 5.19  
+ Median : 0.25651   Median :  0.00   Median : 9.69  
+ Mean   : 3.61352   Mean   : 11.36   Mean   :11.14  
+ 3rd Qu.: 3.67708   3rd Qu.: 12.50   3rd Qu.:18.10  
+ Max.   :88.97620   Max.   :100.00   Max.   :27.74  
+      chas              nox               rm       
+ Min.   :0.00000   Min.   :0.3850   Min.   :3.561  
+ 1st Qu.:0.00000   1st Qu.:0.4490   1st Qu.:5.886  
+ Median :0.00000   Median :0.5380   Median :6.208  
+ Mean   :0.06917   Mean   :0.5547   Mean   :6.285  
+ 3rd Qu.:0.00000   3rd Qu.:0.6240   3rd Qu.:6.623  
+ Max.   :1.00000   Max.   :0.8710   Max.   :8.780  
+      age              dis              rad        
+ Min.   :  2.90   Min.   : 1.130   Min.   : 1.000  
+ 1st Qu.: 45.02   1st Qu.: 2.100   1st Qu.: 4.000  
+ Median : 77.50   Median : 3.207   Median : 5.000  
+ Mean   : 68.57   Mean   : 3.795   Mean   : 9.549  
+ 3rd Qu.: 94.08   3rd Qu.: 5.188   3rd Qu.:24.000  
+ Max.   :100.00   Max.   :12.127   Max.   :24.000  
+      tax           ptratio          black       
+ Min.   :187.0   Min.   :12.60   Min.   :  0.32  
+ 1st Qu.:279.0   1st Qu.:17.40   1st Qu.:375.38  
+ Median :330.0   Median :19.05   Median :391.44  
+ Mean   :408.2   Mean   :18.46   Mean   :356.67  
+ 3rd Qu.:666.0   3rd Qu.:20.20   3rd Qu.:396.23  
+ Max.   :711.0   Max.   :22.00   Max.   :396.90  
+     lstat            medv      
+ Min.   : 1.73   Min.   : 5.00  
+ 1st Qu.: 6.95   1st Qu.:17.02  
+ Median :11.36   Median :21.20  
+ Mean   :12.65   Mean   :22.53  
+ 3rd Qu.:16.95   3rd Qu.:25.00  
+ Max.   :37.97   Max.   :50.00  
+
+lm.fit15zn = lm(crim~zn)
+summary(lm.fit15zn)
+lm.fit15indus = lm(crim~indus)
+summary(lm.fit15indus)
+lm.fit15chas = lm(crim~chas)
+summary(lm.fit15chas)
+lm.fit15nox = lm(crim~nox)
+summary(lm.fit15nox)
+lm.fit15rm = lm(crim~rm)
+summary(lm.fit15rm)
+lm.fit15age = lm(crim~age)
+summary(lm.fit15age)
+lm.fit15dis = lm(crim~dis)
+summary(lm.fit15dis)
+
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  17.033228   7.234903   2.354 0.018949 *  
+zn            0.044855   0.018734   2.394 0.017025 *  
+indus        -0.063855   0.083407  -0.766 0.444294    
+chas         -0.749134   1.180147  -0.635 0.525867    
+nox         -10.313535   5.275536  -1.955 0.051152 .  
+rm            0.430131   0.612830   0.702 0.483089    
+age           0.001452   0.017925   0.081 0.935488    
+dis          -0.987176   0.281817  -3.503 0.000502 ***
+rad           0.588209   0.088049   6.680 6.46e-11 ***
+tax          -0.003780   0.005156  -0.733 0.463793    
+ptratio      -0.271081   0.186450  -1.454 0.146611    
+black        -0.007538   0.003673  -2.052 0.040702 *  
+lstat         0.126211   0.075725   1.667 0.096208 .  
+medv         -0.198887   0.060516  -3.287 0.001087 ** 
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.439 on 492 degrees of freedom
+Multiple R-squared:  0.454,	Adjusted R-squared:  0.4396 
+F-statistic: 31.47 on 13 and 492 DF,  p-value: < 2.2e-16
+
+multiple = c(17.033228, )
+
+
+Y = β 0 + β 1 X + β 2 X 2 + β 3 X 3 + er.
+
+lm.zn3 = lm(crim~zn+I(zn^2)+I(zn^3))
+lm.zn3poly = lm(crim~poly(zn,3))

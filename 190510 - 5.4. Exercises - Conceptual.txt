@@ -1,0 +1,35 @@
+Chapter 5, Exercise 2
+
+
+(a) Probability that jth IS an observation = 1/n; probability that it ISN'T is 1-1/n
+
+(b) The same 1 - 1/n, because of replacement
+
+(c) There are 'n' possible times of equal probability of 'n' to be picked
+
+(d) 1 - (1 - 1/5)^5 = 0.67232
+
+(e) 1 - (1 - 1/100)^100 = 0.6339677
+
+(f) 1 - (1 - 1/10000)^10000 = 0.632139
+
+(h) The observation 0.637 comes close to the predicted value 0.632139
+
+
+
+Chapter 5, Exercise 3
+
+
+(a) Dataset divided in a number of equal parts, one part held out for validation, the rest are
+used for training. Then move to the next part that's held out for validation and so on.
+
+(b) i. Validation set only uses half of the data & there's a lot of variability between test runs
+ii. LOOCV has low bias but the data are shared between different runs, so overfitting occurs, also
+computationally heavy.
+
+
+
+Chapter 5, Exercise 4
+
+
+Get the standard error using bootstrap and from there calculate standard deviation.

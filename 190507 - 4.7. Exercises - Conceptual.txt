@@ -1,0 +1,34 @@
+(4)
+
+(a) 1/10
+(b) 1/10 * 1/10 = 1/100
+(c) 1/10^100
+
+
+(5)
+a.  If the Bayes decision boundary is linear, we expect QDA to perform better on the training set because it's higher flexiblity will yield a closer fit. On the test set, we expect LDA to perform better than QDA because QDA could overfit the linearity of the Bayes decision boundary.
+b.  QDA
+c.  We expect the test prediction accuracy of QDA relative to LDA to improve, in general, as the the sample size n increases because a more flexibile method will yield a better fit as more samples can be fit and variance is offset by the larger sample sizes.
+d. False
+
+(6) 
+
+a.
+p(x) = (e(-6 + 0.05*40 + 1*3.5)) / (1 + e(-6 + 0.05*40 + 1*3.5)) = e(-0.5) / 1 + e(-0.5) = 0.60653065971 / (1 + 0.60653065971) = 0.377540669 = 37.75%
+
+b. 0.5 = (e(-6 + 0.05*x + 1*3.5)) / (1 + e(-6 + 0.05*x + 1*3.5))
+
+
+(9)
+a. 
+x/(1-x) = 0.37
+x = 0.37*(1-x)
+x = 0.37 - 0.37x
+1.37x = 0.37
+x = 0.37/1.37
+x = 0.27
+
+b.
+0.16/(1-0.16) = 0.19
+
+
